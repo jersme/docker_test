@@ -12,6 +12,7 @@ RUN apt-get update && \
     	r-cran-jsonlite \
     	r-cran-dplyr \
     	r-cran-stringr \
-    	r-cran-ggplot2
+    	r-cran-ggplot2 \
+    	r-cran-tidyverse
     	
 CMD ["R"]
