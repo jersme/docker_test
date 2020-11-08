@@ -6,12 +6,11 @@ COPY entrypoint.sh /entrypoint.sh
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/entrypoint.sh"]
 
-RUN apt-get update && \
-    apt-get install -y -qq \
-    	r-cran-plumber \
-    	r-cran-jsonlite \
-    	r-cran-dplyr \
-    	r-cran-stringr \
-    	r-cran-ggplot2
+RUN R -e "install.packages('jsonlite')"
+RUN R -e "install.packages('plumber')"
+RUN R -e "install.packages('dplyr')"
+RUN R -e "install.packages('stringr')"
+RUN R -e "install.packages('ggplot2')"
+    	
     	
 CMD ["R"]
