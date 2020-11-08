@@ -24,4 +24,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Build the tagged Docker image
-        run: time docker build --no-cache -t r_apt -f Dockerfile
+        run: time docker build --no-cache -t Dockerfile .
