@@ -12,4 +12,5 @@ RUN R -e "install.packages('dplyr')"
 RUN R -e "install.packages('stringr')"
 RUN R -e "install.packages('ggplot2')"
     	
+    	
 CMD ["R"]
